@@ -48,7 +48,7 @@ nav .logo img {
 }
 
 nav .logo span {
-    font-size: 22px;
+    font-size: 1.75em;
     color: #005073;
 }
 
@@ -63,10 +63,10 @@ nav .nav-links li {
 }
 
 nav .nav-links li a {
-    color: #333;
+    color: #005073;
     text-decoration: none;
     font-weight: bold;
-    font-size: 18px;
+    font-size: 1.2em;
 }
 
 nav .nav-links li a.active {
@@ -75,8 +75,7 @@ nav .nav-links li a.active {
 
 .border {
     border: 1px solid #ddd;
-    width: 85%;
-    margin-top: 30px;
+    width: 40%;
     margin-bottom: 30px;
     margin-left: auto;
     margin-right: auto;
@@ -89,20 +88,36 @@ main {
 
 footer {
     background-color: #005073;
-    color: white;
     text-align: center;
     padding: 1em 0;
 }
 
 .footer-content {
-    padding: 10px;
+    padding: 20px;
 }
 
 .footer-content h2 {
     margin: 0;
+    color: white;
 }
 
 .footer-content p {
-    margin: 0.5em 0 0 0;
+    margin: 5px;
+    color: white;
+}
+
+/* Universal font sizes and text colour */
+h1 {
+    font-size: 2em;
+    color: #005073;
+}
+
+h2 {
+    font-size: 1.25em;
+    color: #007b99;
+}
+
+p {
     font-size: 1em;
+    color: #000000;
 }
