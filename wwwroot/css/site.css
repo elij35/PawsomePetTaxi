@@ -8,7 +8,6 @@ body {
     color: #333;
     display: flex;
     justify-content: center; /* Center horizontally */
-    min-height: 100vh; /* Full viewport height */
 }
 
 .container {
@@ -22,6 +21,7 @@ body {
     background-color: #fff; /* White background for content */
     padding: 15px; /* Padding inside the content area */
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    min-height: 90vh; /* Full viewport height */
 }
 
 header {
@@ -77,6 +77,7 @@ nav .nav-links li a.active {
     border: 1px solid #ddd;
     width: 40%;
     margin-bottom: 30px;
+    margin-top: 10px;
     margin-left: auto;
     margin-right: auto;
 }
@@ -89,7 +90,7 @@ main {
 footer {
     background-color: #005073;
     text-align: center;
-    padding: 1em 0;
+    padding: 12px;
 }
 
 .footer-content {
@@ -102,8 +103,18 @@ footer {
 }
 
 .footer-content p {
-    margin: 5px;
     color: white;
+    margin: 10px 0 0;
+}
+
+.footer-content a {
+    color: #1e90ff; 
+    text-decoration: none;
+}
+
+.footer-content a:hover {
+    text-decoration: underline;
+    color: #73d0f8;
 }
 
 /* Universal font sizes and text colour */
