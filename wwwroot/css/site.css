@@ -72,7 +72,7 @@ nav .nav-links li a {
 }
 
 nav .nav-links li a.active {
-    color: #ff5e5e;
+    color: #e6973c;
 }
 
 
@@ -87,7 +87,7 @@ nav .nav-links li a.active {
 }
 
 
-/* Where the content is contained */
+/* Where the content is */
 main {
     text-align: center;
     padding: 20px;
@@ -135,6 +135,7 @@ h1 {
 h2 {
     font-size: 1.25em;
     color: #007b99;
+    /*color: #000000;*/
 }
 
 p {

@@ -2,7 +2,7 @@
 
 .slider {
     position: relative;
-    width: 75%; /* Slider takes up 65% of viewport width */
+    width: 65%; /* Slider takes up 65% of viewport width */
     max-width: 1200px; /* Optional: Maximum width to limit slider width */
     overflow: hidden;
     margin: auto;
@@ -11,12 +11,13 @@
 .slides {
     display: flex;
     transition: transform 0.5s ease-in-out;
-    height: 80vh;
+    height: 60vh;
 }
 
 .slides img {
-    min-width: 100%; /* Ensure only one image is visible at a time */
+    min-width: 100%;
     display: block;
+    object-fit: scale-down;
 }
 
 button {
