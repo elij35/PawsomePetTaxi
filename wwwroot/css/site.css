@@ -4,8 +4,24 @@ body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #f4f4f4;
+    background-color: #f0f0f0; /* Light gray background */
     color: #333;
+    display: flex;
+    justify-content: center; /* Center horizontally */
+    /*align-items: center; /* Center vertically */
+    min-height: 100vh; /* Full viewport height */
+}
+
+.container {
+    width: 80%; /* Adjust width as needed */
+    max-width: 1200px; /* Optional: max width */
+}
+
+.main-content {
+    background-color: #fff; /* White background for content */
+    padding: 20px; /* Padding inside the content area */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Optional: shadow for better visibility */
+    box-sizing: border-box; /* Include padding in width */
 }
 
 header {
