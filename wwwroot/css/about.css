@@ -2,10 +2,9 @@
 
 .about {
     text-align: center;
-}
-
-.about h1 {
-    margin-bottom: 1em;
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .content {
@@ -23,16 +22,20 @@
 }
 
 .content .bio {
-    max-width: 600px;
     text-align: center;
+    margin-top: auto;
+    margin-bottom: auto;
 }
 
-.content .bio h2 {
-    margin-bottom: 1em;
+.bio .cert-images {
+    display: flex;
+    justify-content: center;
 }
 
-.content .bio p {
-    margin-bottom: 1em;
+.bio .cert-images img {
+    width: auto;
+    height: 165px;    
+    margin: 0 1em;
 }
 
 .pets {
@@ -53,8 +56,8 @@
 }
 
 .pets .pet-images img {
-    width: 200px;
-    height: auto;
+    width: auto;
+    height: 220px;  
     border-radius: 50%;
     margin: 0 1em;
 }
