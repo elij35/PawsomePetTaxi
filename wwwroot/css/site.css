@@ -8,20 +8,20 @@ body {
     color: #333;
     display: flex;
     justify-content: center; /* Center horizontally */
-    /*align-items: center; /* Center vertically */
     min-height: 100vh; /* Full viewport height */
 }
 
 .container {
     width: 80%; /* Adjust width as needed */
     max-width: 1200px; /* Optional: max width */
+    display: flex;
+    flex-direction: column;
 }
 
 .main-content {
     background-color: #fff; /* White background for content */
-    padding: 20px; /* Padding inside the content area */
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Optional: shadow for better visibility */
-    box-sizing: border-box; /* Include padding in width */
+    padding: 15px; /* Padding inside the content area */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
 header {
@@ -33,7 +33,7 @@ nav {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 1em 2em;
+    padding: 1em 3em;
 }
 
 nav .logo {
@@ -42,8 +42,14 @@ nav .logo {
 }
 
 nav .logo img {
-    height: 50px;
-    margin-right: 10px;
+    height: 115px;
+    margin-right: 32px;
+    border-radius: 50%;
+}
+
+nav .logo span {
+    font-size: 22px;
+    color: #005073;
 }
 
 nav .nav-links {
@@ -59,16 +65,26 @@ nav .nav-links li {
 nav .nav-links li a {
     color: #333;
     text-decoration: none;
-    font-size: 1em;
+    font-weight: bold;
+    font-size: 18px;
 }
 
 nav .nav-links li a.active {
     color: #ff5e5e;
 }
 
+.border {
+    border: 1px solid #ddd;
+    width: 85%;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
 main {
     text-align: center;
-    padding: 2em 2em;
+    padding: 20px;
 }
 
 footer {
@@ -76,6 +92,10 @@ footer {
     color: white;
     text-align: center;
     padding: 1em 0;
+}
+
+.footer-content {
+    padding: 10px;
 }
 
 .footer-content h2 {

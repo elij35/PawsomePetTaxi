@@ -1,8 +1,43 @@
 /* Home Page */
 
-.banner img {
-    width: 100%;
-    height: auto;
+.slider {
+    position: relative;
+    width: 75%; /* Slider takes up 65% of viewport width */
+    max-width: 1200px; /* Optional: Maximum width to limit slider width */
+    overflow: hidden;
+    margin: auto;
+}
+
+.slides {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+    height: 80vh;
+}
+
+.slides img {
+    min-width: 100%; /* Ensure only one image is visible at a time */
+    display: block;
+}
+
+button {
+    position: absolute;
+    top: 50%;
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    z-index: 100;
+    font-size: 24px;
+    transform: translateY(-50%);
+}
+
+.prev {
+    left: 10px;
+}
+
+.next {
+    right: 10px;
 }
 
 .welcome h1 {
