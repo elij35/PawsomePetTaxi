@@ -1,0 +1,16 @@
+/* Home Page */
+
+.banner img {
+    width: 100%;
+    height: auto;
+}
+
+.welcome h1 {
+    font-size: 2em;
+    color: #005073;
+}
+
+.welcome p {
+    font-size: 1.2em;
+    color: #007b99;
+}
