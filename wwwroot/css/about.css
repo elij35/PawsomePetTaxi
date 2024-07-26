@@ -5,8 +5,6 @@
 }
 
 .about h1 {
-    font-size: 2em;
-    color: #005073;
     margin-bottom: 1em;
 }
 
@@ -26,18 +24,14 @@
 
 .content .bio {
     max-width: 600px;
-    text-align: left;
+    text-align: center;
 }
 
 .content .bio h2 {
-    font-size: 1.5em;
-    color: #007b99;
     margin-bottom: 1em;
 }
 
 .content .bio p {
-    font-size: 1em;
-    color: #333;
     margin-bottom: 1em;
 }
 
@@ -47,9 +41,10 @@
 }
 
 .pets p {
-    font-size: 1em;
-    color: #333;
-    margin-bottom: 1em;
+    margin-bottom: 20px;
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .pets .pet-images {
