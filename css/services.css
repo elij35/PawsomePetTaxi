@@ -1,1 +1,42 @@
 /* Services Page */
+
+.services {
+    text-align: center;
+}
+
+.services h2 {
+    font-size: 2em;
+    margin-bottom: 10px;
+}
+
+.services p {
+    font-size: 1.2em;
+    margin-bottom: 20px;
+}
+
+.service-cards {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.service-card {
+    background: #8ee3ff;
+    border: 1px solid #8ee3ff;
+    border-radius: 10px;
+    padding: 20px;
+    width: 30%;
+    margin-bottom: 20px;
+    margin-left: 15px;
+}
+
+.service-card img {
+    width: 180px;
+    height: auto;
+    border-radius: 15%;
+    margin-bottom: 12px;
+}
+
+.service-card h3 {
+    font-size: 1.5em;
+    margin-bottom: 15px;
+}

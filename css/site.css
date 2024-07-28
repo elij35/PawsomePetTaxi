@@ -30,16 +30,6 @@ header {
     padding-top: 10px;
 }
 
-.facebook-link {
-    text-align: right;
-    padding: 10px 30px 0 0;
-}
-
-.facebook-link a img {
-    width: 24px;
-    height: 24px;
-}
-
 nav {
     display: flex;
     justify-content: space-between;
@@ -129,7 +119,6 @@ footer {
 
 .footer-content a:hover {
     text-decoration: underline;
-    color: #73d0f8;
 }
 
 
