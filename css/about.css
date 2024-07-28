@@ -14,20 +14,20 @@
     margin-bottom: 2em;
 }
 
-.content .profile img {
+.profile img {
     width: 350px;
     height: auto;
     border-radius: 10px;
     margin-right: 2em;
 }
 
-.content .bio {
+.bio {
     text-align: center;
     margin-top: auto;
     margin-bottom: auto;
 }
 
-.content .bio p {
+.bio p {
     padding: 8px;
 }
 
@@ -38,7 +38,7 @@
 
 .bio .cert-images img {
     width: auto;
-    height: 165px;    
+    height: 110px;    
     margin: 0 1em;
 }
 
