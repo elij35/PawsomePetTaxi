@@ -7,34 +7,24 @@
     <link rel="stylesheet" href="css/site.css">
     <link rel="stylesheet" href="css/index.css">
 
-    <script>
-        function includeHTML() {
-          var z, i, elmnt, file, xhttp;
-          z = document.getElementsByTagName("*");
-          for (i = 0; i < z.length; i++) {
-            elmnt = z[i];
-            file = elmnt.getAttribute("include-html");
-            if (file) {
-              xhttp = new XMLHttpRequest();
-              xhttp.onreadystatechange = function() {
-                if (this.readyState == 4) {
-                  if (this.status == 200) {elmnt.innerHTML = this.responseText;}
-                  if (this.status == 404) {elmnt.innerHTML = "Page not found.";}
-                  elmnt.removeAttribute("include-html");
-                  includeHTML();
-                }
-              }
-              xhttp.open("GET", file, true);
-              xhttp.send();
-              return;
-            }
-          }
-        }
-      </script>
 </head>
-<body onload="includeHTML()">
+<body>
     <div class="container">
-        <div include-html="pages/header.html"></div>
+        <header>            
+            <nav>
+                <div class="logo">
+                    <img src="images/logo.png" alt="Pawsome Pet Taxi Logo">
+                    <span><b>Pawsome Pet Taxi</b></span>
+                </div>
+                <ul class="nav-links">
+                    <li><a href="index.html" class="active">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="services.html">Services</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+        </header>
+
         <div class="main-content">            
             <main>
                 <section class="welcome">
@@ -56,7 +46,18 @@
                 <script src="js/script.js"></script>                            
             </main>      
         </div>
-        <div include-html="pages/footer.html"></div>
+        <footer>
+            <div class="footer-container">
+                <div class="footer-social">
+                    <h2>Pet Taxi Service</h2>
+                    <p>
+                        Call/WhatsApp <a href="tel:+447848901128">07848901128</a> or email <a href="mailto:pawsomepet.taxi@gmail.com">pawsomepet.taxi@gmail.com</a>
+                    </p>          
+                    <a href="#"><img src="../images/logo.png" alt="Pawsome Logo"></a>
+                    <p>&copy; Pawsome Pet Taxi 2024</p>
+                </div>
+            </div>
+        </footer>
     </div>    
 </body>
 </html>
