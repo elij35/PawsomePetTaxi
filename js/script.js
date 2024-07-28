@@ -23,7 +23,10 @@ document.querySelector('.prev').addEventListener('click', () => {
     showSlide(index - 1);
 });
 
+/*
 // Optional: Auto-slide through the images
 setInterval(() => {
     showSlide(index + 1);
 }, 10000); // Change slide every 12 seconds
+
+*/

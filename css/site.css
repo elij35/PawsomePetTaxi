@@ -18,15 +18,15 @@ body {
 }
 
 .main-content {
-    background-color: #fff;
+    background-color: #d1f8ff;
     padding: 15px; 
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     min-height: 90vh;
 }
 
 header {
-    background-color: #fff;
-    border-bottom: 1px solid #ddd;
+    background-color: #7eecff;
+    border-bottom: 1px solid #7eecff;
 }
 
 
@@ -96,7 +96,7 @@ main {
 
 /* Footer Styles */
 footer {
-    background-color: #005073;
+    background-color: #7eecff;
     text-align: center;
     padding: 12px;
 }
@@ -107,16 +107,16 @@ footer {
 
 .footer-content h2 {
     margin: 0;
-    color: white;
+    color: black;
 }
 
 .footer-content p {
-    color: white;
+    color: black;
     margin: 10px 0 0;
 }
 
 .footer-content a {
-    color: #1e90ff; 
+    color: #1714f1; 
     text-decoration: none;
 }
 
@@ -134,8 +134,8 @@ h1 {
 
 h2 {
     font-size: 1.25em;
-    color: #007b99;
-    /*color: #000000;*/
+    /*color: #007b99;*/
+    color: #000000;
 }
 
 p {

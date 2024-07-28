@@ -1,1 +1,8 @@
 /* Contact Page */
+
+.profile img {
+    width: 40%;
+    height: auto;  
+    margin: 0 1em;
+    object-fit: cover;
+}
