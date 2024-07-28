@@ -15,7 +15,7 @@
 }
 
 .profile img {
-    width: 350px;
+    width: 320px;
     height: auto;
     border-radius: 10px;
     margin-right: 2em;
@@ -28,18 +28,27 @@
 }
 
 .bio p {
-    padding: 8px;
+    padding: 5px;
 }
 
 .bio .cert-images {
     display: flex;
     justify-content: center;
+    align-items: center;
 }
 
 .bio .cert-images img {
-    width: auto;
-    height: 110px;    
     margin: 0 1em;
+    height: 160px;
+}
+
+#dbs-image {
+    width: 200px;
+    height: 62px;
+}
+
+#vet-pin {
+    border-radius: 20%;
 }
 
 .pets {
