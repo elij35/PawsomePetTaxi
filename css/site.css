@@ -4,23 +4,15 @@ body {
     margin: 0;
     padding: 0;
     background-color: #f0f0f0;
-    color: #333;
     display: flex;
     justify-content: center;
 }
 
 .container {
     width: 80%;
-    max-width: 1200px;
+    max-width: 1250px;
     display: flex;
     flex-direction: column;
-}
-
-.main-content {
-    background-color: #d1f8ff;
-    padding: 15px; 
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    min-height: 90vh;
 }
 
 header {
@@ -50,6 +42,12 @@ nav .logo img {
 nav .logo span {
     font-size: 1.75em;
     color: #005073;
+    text-decoration: none;
+}
+
+nav .logo span a {
+    color: #005073;
+    text-decoration: none;
 }
 
 nav .nav-links {
@@ -71,6 +69,15 @@ nav .nav-links li a {
 
 nav .nav-links li a.active {
     color: #e6973c;
+}
+
+
+/* Main background colour for entire page (not header or footer) */
+.main-content {
+    background-color: #d1f8ff;
+    padding: 15px; 
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    min-height: 90vh;
 }
 
 
@@ -107,17 +114,12 @@ footer {
     margin: 0 auto;
 }
 
-.footer-column {
-    flex: 1;
-    margin: 0 20px;
-}
-
 .footer-social {
     text-align: center;
 }
 .footer-social img {
     width: auto;
-    height: 85px;
+    height: 100px;
 }
 
 
@@ -129,7 +131,6 @@ h1 {
 
 h2 {
     font-size: 1.25em;
-    /*color: #007b99;*/
     color: black;
 }
 
