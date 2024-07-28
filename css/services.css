@@ -17,6 +17,7 @@
 .service-cards {
     display: flex;
     justify-content: space-evenly;
+    flex-wrap: wrap;
 }
 
 .service-card {
@@ -39,4 +40,45 @@
 .service-card h3 {
     font-size: 1.5em;
     margin-bottom: 15px;
+}
+
+/* Media Queries */
+@media (max-width: 768px) {
+    .service-cards {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .service-card {
+        width: 80%;
+        margin-left: 0;
+        margin-bottom: 20px;
+    }
+
+    .service-card img {
+        width: 150px;
+    }
+
+    .service-card h3 {
+        font-size: 1.3em;
+    }
+}
+
+@media (max-width: 480px) {
+    .services p {
+        font-size: 1em;
+    }
+
+    .service-card {
+        width: 95%;
+        padding: 15px;
+    }
+
+    .service-card img {
+        width: 120px;
+    }
+
+    .service-card h3 {
+        font-size: 1.2em;
+    }
 }
