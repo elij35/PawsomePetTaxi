@@ -1,7 +1,5 @@
 /* Home Page */
 
-/* Home Page */
-
 .slider {
     position: relative;
     width: 65%; /* Slider takes up 65% of viewport width */
@@ -43,18 +41,16 @@ button {
     right: 10px;
 }
 
-.dots {
+.dots-container {
     text-align: center;
-    position: absolute;
-    bottom: 10px;
-    width: 100%;
+    margin-top: 10px; /* Adjust as needed */
 }
 
 .dot {
     height: 15px;
     width: 15px;
-    margin: 0 2px;
-    background-color: rgba(0, 0, 0, 0.5);
+    margin: 0 5px;
+    background-color: rgb(52, 52, 52);
     border-radius: 50%;
     display: inline-block;
     transition: background-color 0.6s ease;

@@ -114,7 +114,7 @@
 
 @media (max-width: 480px) {
     .about {
-        width: 95%;
+        width: 100%;
     }
 
     .profile img {
