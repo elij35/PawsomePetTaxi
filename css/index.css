@@ -1,8 +1,10 @@
 /* Home Page */
 
+/* Home Page */
+
 .slider {
     position: relative;
-    width: 60%; /* Slider takes up 65% of viewport width */
+    width: 65%; /* Slider takes up 65% of viewport width */
     max-width: 1200px; /* Optional: Maximum width to limit slider width */
     overflow: hidden;
     margin: auto;
@@ -59,6 +61,6 @@ button {
     cursor: pointer;
 }
 
-.active, .dot:hover {
+.dot-active {
     background-color: white;
 }

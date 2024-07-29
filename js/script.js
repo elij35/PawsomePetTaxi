@@ -16,7 +16,7 @@ document.addEventListener('DOMContentLoaded', function () {
         slides.style.transform = `translateX(${-index * 100}%)`;
 
         dots.forEach((dot, idx) => {
-            dot.classList.toggle('active', idx === index);
+            dot.classList.toggle('dot-active', idx === index);
         });
     }
 
