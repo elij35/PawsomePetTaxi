@@ -7,17 +7,35 @@ document.addEventListener('DOMContentLoaded', function () {
     const images = document.querySelectorAll('.slides img');
     const dots = document.querySelectorAll('.dot');
     const totalSlides = images.length;
+    let autoSlideInterval;
 
     function showSlide(n) {
-        if (n >= totalSlides) index = 0;
-        else if (n < 0) index = totalSlides - 1;
-        else index = n;
+        if (n >= totalSlides) {
+            index = 0;
+        } else if (n < 0) {
+            index = totalSlides - 1;
+        } else {
+            index = n;
+        }
 
+        slides.style.transition = 'transform 0.5s ease-in-out';
         slides.style.transform = `translateX(${-index * 100}%)`;
 
         dots.forEach((dot, idx) => {
             dot.classList.toggle('dot-active', idx === index);
         });
+
+        // Reset the auto-slide interval timer
+        resetAutoSlide();
+    }
+
+    function resetAutoSlide() {
+        if (autoSlideInterval) {
+            clearInterval(autoSlideInterval);
+        }
+        autoSlideInterval = setInterval(() => {
+            showSlide(index + 1);
+        }, 10000); // Change slide every 10 seconds
     }
 
     document.querySelector('.next').addEventListener('click', () => {
@@ -34,12 +52,7 @@ document.addEventListener('DOMContentLoaded', function () {
         });
     });
 
+    // Initialize the slider and start the auto-slide interval
     showSlide(index);
-
-    /*
-    // Optional: Auto-slide through the images
-    setInterval(() => {
-        showSlide(index + 1);
-    }, 10000); // Change slide every 10 seconds
-    */
+    resetAutoSlide();
 });
