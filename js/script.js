@@ -9,13 +9,6 @@ document.addEventListener('DOMContentLoaded', function () {
     const totalSlides = images.length;
     let autoSlideInterval;
 
-    const menuToggle = document.getElementById('menu-toggle');
-    const navLinks = document.getElementById('nav-links');
-
-    menuToggle.addEventListener('click', function() {
-        navLinks.classList.toggle('show');
-    });
-
     function showSlide(n) {
         if (n >= totalSlides) {
             index = 0;
