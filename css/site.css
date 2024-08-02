@@ -83,7 +83,7 @@ nav .nav-links li a.active {
 /* Main background colour for entire page (not header or footer) */
 .main-content {
     background-color: #d1f8ff;
-    padding: 15px; 
+    padding: 12px; 
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     min-height: 90vh;
     min-width: 300px; /* Ensure minimum width for smaller screens */
@@ -104,7 +104,7 @@ nav .nav-links li a.active {
 /* Where the content is */
 main {
     text-align: center;
-    padding: 20px;
+    padding: 15px;
 }
 
 
@@ -150,36 +150,51 @@ p {
     color: black;
 }
 
+
+/* Mobile pop out nav bar style */
+.menu-toggle {
+    display: none;
+    background: none;
+    border: none;
+    color: white;
+    font-size: 24px;
+    cursor: pointer;
+}
+
+@media (max-width: 768px) {
+    .nav-links {
+        position: fixed;
+        right: -250px;
+        top: 0;
+        height: 100%;
+        width: 250px;
+        background-color: #333;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        transition: right 0.3s ease-in-out;
+    }
+
+    .nav-links.show {
+        right: 0;
+    }
+
+    .nav-links li {
+        margin: 20px 0;
+    }
+
+    .menu-toggle {
+        display: block;
+    }
+}
+
+
 /* Media Queries */
 @media (max-width: 768px) {
     .container {
         width: 100%;
     }
-    
-    nav {
-        flex-direction: column;
-        align-items: flex-start;
-    }
-
-    nav .logo img {
-        height: 80px;
-        margin-right: 20px;
-    }
-
-    nav .logo span {
-        font-size: 1.5em;
-    }
-
-    nav .nav-links {
-        flex-direction: column;
-        align-items: flex-start;
-    }
-
-    nav .nav-links li {
-        margin-left: 0;
-        margin-top: 5px;
-    }
-
+        
     .main-content {
         min-height: 70vh;
         padding: 10px;
@@ -195,7 +210,6 @@ p {
     }
 }
 
-/* Media Queries */
 @media (max-width: 480px) {
     body {
         margin: 0;
@@ -206,34 +220,6 @@ p {
         width: 100%;
         padding: 0;
         box-sizing: border-box;
-    }
-
-    nav {
-        padding: 1em;
-        box-sizing: border-box;
-    }
-
-    nav .logo img {
-        height: 60px;
-        margin-right: 15px;
-    }
-
-    nav .logo span {
-        font-size: 1.25em;
-    }
-
-    nav .nav-links {
-        flex-direction: column;
-        align-items: flex-start;
-    }
-
-    nav .nav-links li {
-        margin-left: 0;
-        margin-top: 5px;
-    }
-
-    nav .nav-links li a {
-        font-size: 1em;
     }
 
     .main-content {

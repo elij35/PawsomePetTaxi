@@ -14,21 +14,10 @@
 }
 
 .service-card {
-    background: #8ee3ff;
-    border: 1px solid #8ee3ff;
-    border-radius: 15px;
-    padding: 15px;
-    width: 80%;
-    min-width: 220px;
-    display: flex;
-    flex-direction: row; 
-    align-items: center;
-    gap: 20px;
-}
-
-.service-card img {
-    width: 185px;
-    border-radius: 15px;
+    background: #91e4ff;
+    border-radius: 5px;
+    width: 65%;
+    padding: 8px;
 }
 
 /* Media Queries */
@@ -39,13 +28,9 @@
     }
 
     .service-card {
-        width: 80%;
         flex-direction: column;
         text-align: center;
-    }
-
-    .service-card img {
-        width: 150px;
+        width: 80%;
     }
 
     .service-card-content {
@@ -59,12 +44,8 @@
     }
 
     .service-card {
-        width: 95%;
         padding: 15px;
-    }
-
-    .service-card img {
-        width: 120px;
+        width: 80%;
     }
 
     .service-card h3 {
