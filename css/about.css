@@ -16,7 +16,7 @@
 }
 
 .profile img {
-    width: 45%;
+    width: 48%;
     border-radius: 10px;
     margin: auto;    
 }
@@ -71,9 +71,9 @@
 }
 
 .pets .pet-images img {
-    height: auto;
-    width: 45%;
-    border-radius: 5%;
+    height: 280px;
+    width: auto;
+    border-radius: 8%;
     margin: 0 1em;
     object-fit: cover;
 }

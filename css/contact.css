@@ -1,17 +1,7 @@
 /* Contact Page */
 
-.contact p a {
-    text-decoration: none;
-    color: black;
-}
-
-.contact p a:hover {
-    color: blue;
-    text-decoration: underline;
-}
-
 .business-card img {
-    width: 40%;
+    width: 45%;
     object-fit: cover;
 }
 

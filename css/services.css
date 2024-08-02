@@ -10,14 +10,14 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    gap: 20px;
+    gap: 15px;
 }
 
 .service-card {
     background: #91e4ff;
     border-radius: 10px;
-    width: 65%;
-    padding: 8px;
+    width: 68%;
+    padding: 15px;
 }
 
 /* Media Queries */
