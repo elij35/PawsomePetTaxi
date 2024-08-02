@@ -2,7 +2,7 @@
 
 .slider {
     position: relative;
-    width: 65%; /* Slider takes up 65% of viewport width */
+    width: 95%; /* Slider takes up 65% of viewport width */
     max-width: 1200px; /* Optional: Maximum width to limit slider width */
     overflow: hidden;
     margin: auto;
