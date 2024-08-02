@@ -1,8 +1,19 @@
 /* Contact Page */
 
 .business-card img {
-    width: 46%;
-    height: auto;  
-    margin: 0 1em;
+    width: 40%;
     object-fit: cover;
+}
+
+/* Media Queries */
+@media (max-width: 768px) {
+    .business-card img {
+        width: 90%;
+    }
+}
+
+@media (max-width: 480px) {
+    .business-card img {
+        width: 90%;
+    }
 }

@@ -15,7 +15,7 @@
 
 .service-card {
     background: #91e4ff;
-    border-radius: 5px;
+    border-radius: 10px;
     width: 65%;
     padding: 8px;
 }
@@ -30,7 +30,7 @@
     .service-card {
         flex-direction: column;
         text-align: center;
-        width: 80%;
+        width: 90%;
     }
 
     .service-card-content {
@@ -45,7 +45,7 @@
 
     .service-card {
         padding: 15px;
-        width: 80%;
+        width: 90%;
     }
 
     .service-card h3 {
