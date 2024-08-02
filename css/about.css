@@ -2,25 +2,23 @@
 
 .about {
     text-align: center;
-    width: 65%;
+    margin: 0 auto;
     max-width: 1200px;
-    margin-left: auto;
-    margin-right: auto;
 }
 
 .content {
     display: flex;
     justify-content: center;
-    align-items: flex-start;
     margin-bottom: 2em;
     flex-wrap: wrap;
+    margin: auto;
+    width: 60%;
 }
 
 .profile img {
-    width: 48%;
+    width: 45%;
     border-radius: 10px;
-    margin-right: 2em;
-    margin-top: 10px;
+    margin: auto;    
 }
 
 .bio {
@@ -73,9 +71,9 @@
 }
 
 .pets .pet-images img {
-    height: 280px;
-    width: auto;
-    border-radius: 15%;
+    height: auto;
+    width: 45%;
+    border-radius: 5%;
     margin: 0 1em;
     object-fit: cover;
 }
@@ -91,6 +89,7 @@
         width: 85%;
         margin-right: 0;
         margin-bottom: 1em;
+        margin-top: 15px;
     }
 
     .bio {
@@ -114,16 +113,12 @@
 }
 
 @media (max-width: 480px) {
-    .about {
+    .content {
         width: 100%;
     }
 
     .profile img {
         width: 85%;
-    }
-
-    .bio .cert-images img {
-        height: 100px;
     }
 
     #dbs-image {
@@ -132,6 +127,6 @@
     }
 
     .pets .pet-images img {
-        height: 180px;
+        height: 175px;
     }
 }

@@ -1,5 +1,15 @@
 /* Contact Page */
 
+.contact p a {
+    text-decoration: none;
+    color: black;
+}
+
+.contact p a:hover {
+    color: blue;
+    text-decoration: underline;
+}
+
 .business-card img {
     width: 40%;
     object-fit: cover;
@@ -8,12 +18,12 @@
 /* Media Queries */
 @media (max-width: 768px) {
     .business-card img {
-        width: 90%;
+        width: 100%;
     }
 }
 
 @media (max-width: 480px) {
     .business-card img {
-        width: 90%;
+        width: 100%;
     }
 }
