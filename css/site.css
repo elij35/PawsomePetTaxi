@@ -1,12 +1,11 @@
-﻿/* Formatting for entire website */
-body {
+﻿body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
     background-color: #f0f0f0;
     display: flex;
     justify-content: center;
-    min-width: 300px; /* Ensure minimum width for smaller screens */
+    min-width: 300px;
 }
 
 .container {
@@ -14,14 +13,14 @@ body {
     max-width: 1200px;
     display: flex;
     flex-direction: column;
-    min-width: 300px; /* Ensure minimum width for smaller screens */
+    min-width: 300px;
 }
 
 header {
     background-color: #7eecff;
     border-bottom: 1px solid #7eecff;
     position: relative;
-    min-width: 300px; /* Ensure minimum width for smaller screens */
+    min-width: 300px;
 }
 
 nav {
@@ -80,13 +79,13 @@ nav .nav-links li a.active {
 }
 
 
-/* Main background colour for entire page (not header or footer) */
+/* Main background colour for content */
 .main-content {
     background-color: #d1f8ff;
     padding: 10px; 
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    min-height: 80vh;
-    min-width: 300px; /* Ensure minimum width for smaller screens */
+    min-height: 65vh;
+    min-width: 300px;
 }
 
 
@@ -100,8 +99,6 @@ nav .nav-links li a.active {
     margin-right: auto;
 }
 
-
-/* Where the content is */
 main {
     text-align: center;
     padding: 15px;
@@ -151,6 +148,7 @@ p {
     color: black;
 }
 
+
 /* Media Queries */
 @media (max-width: 768px) {
     .container {
@@ -182,7 +180,7 @@ p {
     }
 
     .main-content {
-        min-height: 70vh;
+        min-height: 65vh;
         padding: 10px;
     }
 
@@ -196,7 +194,6 @@ p {
     }
 }
 
-/* Media Queries */
 @media (max-width: 480px) {
     body {
         margin: 0;

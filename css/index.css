@@ -2,8 +2,8 @@
 
 .slider {
     position: relative;
-    width: 95%; /* Slider takes up 65% of viewport width */
-    max-width: 1200px; /* Optional: Maximum width to limit slider width */
+    width: 95%;
+    max-width: 1200px;
     overflow: hidden;
     margin: auto;
 }
@@ -43,7 +43,7 @@ button {
 
 .dots-container {
     text-align: center;
-    margin-top: 10px; /* Adjust as needed */
+    margin-top: 10px;
     padding-bottom: 18px;
 }
 
