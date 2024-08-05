@@ -44,6 +44,7 @@ button {
 .dots-container {
     text-align: center;
     margin-top: 10px; /* Adjust as needed */
+    padding-bottom: 18px;
 }
 
 .dot {
