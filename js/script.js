@@ -56,3 +56,35 @@ document.addEventListener('DOMContentLoaded', function () {
     showSlide(index);
     resetAutoSlide();
 });
+
+// script.js
+document.addEventListener('DOMContentLoaded', (event) => {
+    const navLinks = document.getElementById('navLinks');
+    const overlay = document.getElementById('overlay');
+    const body = document.body;
+
+    // Toggle menu and overlay visibility
+    function toggleOffCanvasMenu() {
+        navLinks.classList.toggle('open');
+        overlay.classList.toggle('show');
+        body.classList.toggle('menu-open');
+    }
+
+    // Close the menu when clicking on the menu icon
+    document.querySelector('.menu-icon').addEventListener('click', toggleOffCanvasMenu);
+
+    // Close the menu when clicking on the overlay
+    overlay.addEventListener('click', toggleOffCanvasMenu);
+
+    // Close the menu when clicking on the close button inside the menu
+    document.querySelector('.close-btn').addEventListener('click', toggleOffCanvasMenu);
+
+    // Close the menu when clicking anywhere outside of the menu and overlay
+    window.addEventListener('click', (event) => {
+        if (!navLinks.contains(event.target) && !overlay.contains(event.target) && !event.target.classList.contains('menu-icon')) {
+            if (navLinks.classList.contains('open')) {
+                toggleOffCanvasMenu();
+            }
+        }
+    });
+});
