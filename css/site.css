@@ -217,20 +217,6 @@ p {
         font-size: 1.25em;
     }
 
-    nav .nav-links {
-        flex-direction: column;
-        align-items: flex-start;
-    }
-
-    nav .nav-links li {
-        margin-left: 0;
-        margin-top: 5px;
-    }
-
-    nav .nav-links li a {
-        font-size: 1em;
-    }
-
     .main-content {
         padding: 8px;
         width: 100%;
@@ -263,5 +249,68 @@ p {
 
     .footer-social img {
         height: 60px;
+    }
+
+    /* Mobile navbar off screen popup */
+    .menu-icon {
+        display: block;
+        font-size: 36px;
+        position: fixed;
+        left: 20px;
+        top: 22px;
+        z-index: 1100;
+    }
+
+    /* Off-canvas menu styles for mobile */
+    #navLinks {
+        position: fixed;
+        top: 0;
+        left: -250px;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: flex-start;
+        padding: 60px 20px;
+        transition: left 0.3s ease;
+        z-index: 1000;
+        background-color: #7eecff;
+        width: 100px;
+    }
+
+    .logo {
+        margin-left: 52px;
+        z-index: 1100;
+    }
+
+    /* Reset margin and adjust font size for mobile */
+    #navLinks li {
+        margin-left: 0;
+        margin-top: 40px;
+    }
+
+    #navLinks a {
+        font-size: 1.3em;
+    }
+
+    /* When the menu is open on mobile */
+    #navLinks.open {
+        left: 0;
+    }
+
+    /* Hide the default nav-links for mobile */
+    .nav-links {
+        display: none;
+    }
+
+     #overlay {
+        position: absolute;
+        height: 100%;
+        width: 100%;
+        display: none; 
+    }
+
+    .menu-open #overlay {
+        display: block;
     }
 }
