@@ -55,6 +55,7 @@ document.addEventListener('DOMContentLoaded', function () {
     resetAutoSlide();
 });
 
+// For sidebar on phone screens
 document.addEventListener('DOMContentLoaded', (event) => {
     const navLinks = document.getElementById('navLinks');
     const overlay = document.getElementById('overlay');
