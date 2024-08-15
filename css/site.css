@@ -255,7 +255,7 @@ p {
     .menu-icon {
         display: block;
         font-size: 36px;
-        position: fixed;
+        position: absolute;
         left: 20px;
         top: 22px;
         z-index: 1100;
@@ -283,7 +283,6 @@ p {
         z-index: 1100;
     }
 
-    /* Reset margin and adjust font size for mobile */
     #navLinks li {
         margin-left: 0;
         margin-top: 40px;
@@ -293,12 +292,10 @@ p {
         font-size: 1.3em;
     }
 
-    /* When the menu is open on mobile */
     #navLinks.open {
         left: 0;
     }
 
-    /* Hide the default nav-links for mobile */
     .nav-links {
         display: none;
     }
