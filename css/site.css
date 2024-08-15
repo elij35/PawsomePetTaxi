@@ -251,7 +251,8 @@ p {
         height: 60px;
     }
 
-    /* Mobile navbar off screen popup */
+    
+    /* Everything below is sidebar related */
     .menu-icon {
         display: block;
         font-size: 36px;
@@ -259,9 +260,17 @@ p {
         left: 20px;
         top: 22px;
         z-index: 1100;
+        transition: transform 0.3s ease;
     }
 
-    /* Off-canvas menu styles for mobile */
+    .menu-open .menu-icon {
+        transform: rotate(90deg);
+    }
+
+    .menu-open #overlay {
+        display: block;
+    }
+
     #navLinks {
         position: fixed;
         top: 0;
@@ -305,9 +314,5 @@ p {
         height: 100%;
         width: 100%;
         display: none; 
-    }
-
-    .menu-open #overlay {
-        display: block;
-    }
+    }    
 }

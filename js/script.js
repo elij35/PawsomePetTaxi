@@ -25,7 +25,6 @@ document.addEventListener('DOMContentLoaded', function () {
             dot.classList.toggle('dot-active', idx === index);
         });
 
-        // Reset the auto-slide interval timer
         resetAutoSlide();
     }
 
@@ -35,7 +34,7 @@ document.addEventListener('DOMContentLoaded', function () {
         }
         autoSlideInterval = setInterval(() => {
             showSlide(index + 1);
-        }, 10000); // Change slide every 10 seconds
+        }, 10000); // Changes the slide every 10 seconds
     }
 
     document.querySelector('.next').addEventListener('click', () => {
@@ -52,12 +51,10 @@ document.addEventListener('DOMContentLoaded', function () {
         });
     });
 
-    // Initialize the slider and start the auto-slide interval
     showSlide(index);
     resetAutoSlide();
 });
 
-// script.js
 document.addEventListener('DOMContentLoaded', (event) => {
     const navLinks = document.getElementById('navLinks');
     const overlay = document.getElementById('overlay');
@@ -75,9 +72,6 @@ document.addEventListener('DOMContentLoaded', (event) => {
 
     // Close the menu when clicking on the overlay
     overlay.addEventListener('click', toggleOffCanvasMenu);
-
-    // Close the menu when clicking on the close button inside the menu
-    document.querySelector('.close-btn').addEventListener('click', toggleOffCanvasMenu);
 
     // Close the menu when clicking anywhere outside of the menu and overlay
     window.addEventListener('click', (event) => {
