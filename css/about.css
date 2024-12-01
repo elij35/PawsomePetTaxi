@@ -1,68 +1,33 @@
 /* About Page */
 
-.about {
-    text-align: center;
-    margin: 0 auto;
-    max-width: 1200px;
-}
-
-.content {
-    display: flex;
+#about {
     justify-content: center;
-    margin-bottom: 2em;
-    flex-wrap: wrap;
     margin: auto;
-    width: 65%;
+    max-width: 1000px;
 }
 
 .profile img {
-    width: 52%;
+    width: 55%;
     min-width: 250px;
     border-radius: 10px;
-    margin: auto;
+    margin-bottom: 1rem;
 }
 
-.bio {
-    text-align: center;
-    margin-top: auto;
-    margin-bottom: auto;
-}
-
-.bio p {
-    padding: 5px;
-}
-
-.bio .cert-images {
+.cert-images {
     display: flex;
     justify-content: center;
     align-items: center;
     flex-wrap: wrap;
-    gap: 5px;
+    margin-bottom: 1rem;
 }
 
-.bio .cert-images img {
-    height: 160px;
+.cert-images img {
+    height: 165px;
 }
 
 #dbs-image {
     width: 200px;
-    height: 62px;
-}
-
-#vet-pin {
-    border-radius: 20%;
-}
-
-.pets {
-    text-align: center;
-    margin-bottom: 2em;
-}
-
-.pets p {
-    margin-bottom: 20px;
-    width: 100%;
-    margin-left: auto;
-    margin-right: auto;
+    height: 60px;
 }
 
 .pets .pet-images {
@@ -79,32 +44,8 @@
     object-fit: cover;
 }
 
-
 /* Media Queries */
-@media (max-width: 768px) {
-    .content {
-        flex-direction: column;
-        align-items: center;
-        width: 100%;
-        max-width: 560px;
-    }
-
-    .profile {
-        margin-top: 15px;
-    }
-
-    .bio {
-        margin: 0;
-    }
-
-    .bio .cert-images img {
-        height: 120px;
-    }
-
-    #dbs-image {
-        width: 180px;
-        height: 55px;
-    }
+@media (max-width: 768px) {   
 
     .pets .pet-images img {
         height: 220px;

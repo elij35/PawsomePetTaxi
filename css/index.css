@@ -1,9 +1,10 @@
 /* Home Page */
 
+/* Image Slider */
 .slider {
     position: relative;
-    width: 95%;
-    max-width: 1200px;
+    width: 100%;
+    max-width: 900px;
     overflow: hidden;
     margin: auto;
 }
@@ -11,7 +12,7 @@
 .slides {
     display: flex;
     transition: transform 0.5s ease-in-out;
-    height: 60vh;
+    height: 75vh;
 }
 
 .slides img {
@@ -59,5 +60,17 @@ button {
 }
 
 .dot-active {
-    background-color: white;
+    background-color: #FFD700;
+}
+
+@media (max-width: 768px) { 
+    /* Improve Slider in Mobile view */    
+    .dot {
+        height: 12px;
+        width: 12px;
+    }
+
+    .prev, .next {
+        font-size: 1.2em;
+    }
 }
