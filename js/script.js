@@ -53,21 +53,22 @@ document.addEventListener('DOMContentLoaded', function () {
 
     showSlide(index);
     resetAutoSlide();
+});
 
-    // Select elements
+document.addEventListener('DOMContentLoaded', () => {
     const hamburger = document.querySelector('.hamburger');
     const sidebar = document.querySelector('.sidebar');
     const overlay = document.querySelector('.overlay');
 
-    // Toggle sidebar and overlay
-    hamburger.addEventListener('click', () => {
-        sidebar.classList.toggle('open');
-        overlay.classList.toggle('show');
-    });
+    if (hamburger && sidebar && overlay) {
+        hamburger.addEventListener('click', () => {
+            sidebar.classList.toggle('open');
+            overlay.classList.toggle('show');
+        });
 
-    // Close sidebar when overlay is clicked
-    overlay.addEventListener('click', () => {
-        sidebar.classList.remove('open');
-        overlay.classList.remove('show');
-    });
+        overlay.addEventListener('click', () => {
+            sidebar.classList.remove('open');
+            overlay.classList.remove('show');
+        });
+    }
 });
