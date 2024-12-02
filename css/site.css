@@ -136,9 +136,15 @@ h1, h2, h3 { font-weight: bold; }
     font-weight: bold;
     margin: 1rem 0;
     display: block;
+    padding: 10px;
+    font-size: 1.2em;
 }
 
 .sidebar ul li a:hover {
+    color: #FFD700;
+}
+
+.sidebar ul li a.active {
     color: #FFD700;
 }
 
