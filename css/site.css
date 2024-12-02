@@ -13,39 +13,24 @@ body {
     min-width: 320px;
 }
 
-.page-container {
-    min-height: 92vh;
-}
-
-
 a {
     text-decoration: none;
     color: inherit;
 }
 
 /* Universal font sizes */
-b {
-    font-size: 1.6em;
-}
+b { font-size: 1.6em; }
+h1 { font-size: 1.8em; }
+h2 { font-size: 1.2em; }
+p { font-size: 1em; }
 
-h1 {
-    font-size: 1.8em;
-}
+ul { list-style: none; }
 
-h2 {
-    font-size: 1.2em;
-}
+h1, h2, h3 { font-weight: bold; }
 
-p {
-    font-size: 1em;
-}
-
-ul {
-    list-style: none;
-}
-
-h1, h2, h3 {
-    font-weight: bold;
+/* Page container holding all content */
+.page-container {
+    min-height: 92vh;
 }
 
 /* Header */
@@ -57,22 +42,21 @@ h1, h2, h3 {
 
 .navbar {
     display: flex;
-    margin: auto;
-    max-width: 1200px;
     justify-content: space-between;
-    align-items: center; 
-    background-color: #2A3D45;
-    padding: 1rem 2rem;
-    position: relative; 
+    align-items: center;
+    position: relative;
     gap: 1rem;
+    width: 65%;
+    margin: auto;
 }
 
-.navbar .logo {
+.logo {
     display: flex;
     align-items: center;
+    gap: 0.5rem; /* Space between hamburger, logo, and title */
 }
 
-.navbar .logo img {
+.logo img {
     height: 85px;
     margin-right: 10px;
     border-radius: 50%;
@@ -81,6 +65,7 @@ h1, h2, h3 {
 .nav-links {
     display: flex;
     gap: 1.5rem;
+    text-align: left;
 }
 
 .nav-links a {
@@ -91,15 +76,97 @@ h1, h2, h3 {
     transition: color 0.3s ease;
 }
 
-.nav-links a:hover {
+.nav-links a:hover,
+.nav-links li a.active {
     color: #FFD700;
 }
 
-nav .nav-links li a.active {
+/* Hamburger Menu */
+.hamburger {
+    display: none;
+    cursor: pointer;
+    flex-direction: column;
+    gap: 5px;
+    margin-right: 0.5rem; /* Space between the hamburger menu and logo */
+}
+
+.hamburger span {
+    width: 25px;
+    height: 3px;
+    background: white;
+    border-radius: 2px;
+}
+
+/* Sidebar */
+.sidebar {
+    position: fixed;
+    top: 0;
+    left: -100%;
+    width: 250px;
+    height: 100%;
+    background-color: #2A3D45;
+    color: #fff;
+    z-index: 1000;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    padding: 1.5rem;
+    transition: left 0.3s ease;
+}
+
+.sidebar-logo {
+    width: 100%;
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.sidebar-logo img {
+    height: 100px;
+    border-radius: 50%;
+}
+
+.sidebar ul {
+    width: 100%;
+    list-style: none;
+}
+
+.sidebar ul li a {
+    color: #f0f4f5;
+    text-decoration: none;
+    font-weight: bold;
+    margin: 1rem 0;
+    display: block;
+}
+
+.sidebar ul li a:hover {
     color: #FFD700;
 }
 
-/* Welcome Section */
+/* Overlay */
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 900;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease, visibility 0.3s ease;
+}
+
+/* Open Sidebar */
+.sidebar.open {
+    left: 0;
+}
+
+.overlay.show {
+    opacity: 1;
+    visibility: visible;
+}
+
+/* Welcome section on all pages */
 .info {
     background: #f0f4f5;
     color: #212427;
@@ -107,16 +174,14 @@ nav .nav-links li a.active {
     padding: 2.5rem 2rem;
 }
 
-.info h1 {
-    margin-bottom: 1rem;
-}
-
-.info h2 {
-    margin-bottom: 1rem;
-}
-
+.info h1,
+.info h2,
 .info p {
     margin-bottom: 1rem;
+}
+
+.info h1 {
+    font-size: 2rem;
 }
 
 /* Footer */
@@ -124,7 +189,7 @@ nav .nav-links li a.active {
     background: #2A3D45;
     color: #fff;
     text-align: center;
-    padding: 1rem;
+    padding: 1rem 1.5rem;
     margin-top: 2rem;
 }
 
@@ -140,41 +205,28 @@ nav .nav-links li a.active {
     border-radius: 50%;
 }
 
-/* Media Queries for Mobile */
+/* Media Queries */
 @media (max-width: 768px) {
     /* For smaller screens, stack navbar items */
     .navbar {
         flex-direction: column;
         align-items: flex-start;
+        width: 100%;
+    }
+
+    b {
+        font-size: 1.2em;
+    }
+
+    .hamburger {
+        display: flex;
     }
 
     .nav-links {
-        flex-direction: column;
-        gap: 1rem;
-        width: 100%;
-        text-align: left;
-    }
-
-    .logo {
-        margin-bottom: 1rem;
-    }
-
-    /* Sidebar for smaller screens */
-    .navbar .logo {
-        margin-bottom: 1rem;
+        display: none;
     }
 
     /* Welcome Section */
-    .info h1 {
-        font-size: 2rem;
-    }
-
-    .info p {
-        font-size: 1rem;
-    }
-
-    /* Footer Adjustments for mobile */
-    .footer {
-        padding: 1rem 1.5rem;
-    }
+    .info h1 { font-size: 2rem; }
+    .info p { font-size: 1rem; }
 }

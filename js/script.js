@@ -53,33 +53,21 @@ document.addEventListener('DOMContentLoaded', function () {
 
     showSlide(index);
     resetAutoSlide();
-});
 
-// For sidebar on phone screens
-document.addEventListener('DOMContentLoaded', (event) => {
-    const navLinks = document.getElementById('navLinks');
-    const overlay = document.getElementById('overlay');
-    const body = document.body;
+    // Select elements
+    const hamburger = document.querySelector('.hamburger');
+    const sidebar = document.querySelector('.sidebar');
+    const overlay = document.querySelector('.overlay');
 
-    // Toggle menu and overlay visibility
-    function toggleOffCanvasMenu() {
-        navLinks.classList.toggle('open');
+    // Toggle sidebar and overlay
+    hamburger.addEventListener('click', () => {
+        sidebar.classList.toggle('open');
         overlay.classList.toggle('show');
-        body.classList.toggle('menu-open');
-    }
+    });
 
-    // Close the menu when clicking on the menu icon
-    document.querySelector('.menu-icon').addEventListener('click', toggleOffCanvasMenu);
-
-    // Close the menu when clicking on the overlay
-    overlay.addEventListener('click', toggleOffCanvasMenu);
-
-    // Close the menu when clicking anywhere outside of the menu and overlay
-    window.addEventListener('click', (event) => {
-        if (!navLinks.contains(event.target) && !overlay.contains(event.target) && !event.target.classList.contains('menu-icon')) {
-            if (navLinks.classList.contains('open')) {
-                toggleOffCanvasMenu();
-            }
-        }
+    // Close sidebar when overlay is clicked
+    overlay.addEventListener('click', () => {
+        sidebar.classList.remove('open');
+        overlay.classList.remove('show');
     });
 });

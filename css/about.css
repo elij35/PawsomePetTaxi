@@ -7,7 +7,7 @@
 }
 
 .profile img {
-    width: 55%;
+    width: 45%;
     min-width: 250px;
     border-radius: 10px;
     margin-bottom: 1rem;
@@ -48,6 +48,6 @@
 @media (max-width: 768px) {   
 
     .pets .pet-images img {
-        height: 220px;
+        height: 155px;
     }
 }

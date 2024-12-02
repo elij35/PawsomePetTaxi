@@ -12,13 +12,14 @@
 .slides {
     display: flex;
     transition: transform 0.5s ease-in-out;
-    height: 75vh;
+    height: 72vh;
 }
 
 .slides img {
     min-width: 100%;
     display: block;
     object-fit: scale-down;
+    padding: 8px;
 }
 
 button {
