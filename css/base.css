@@ -68,3 +68,23 @@ ul {
 .text-center {
     text-align: center;
 }
+
+/* Poppins */
+@font-face {
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 300;
+    src: url('/fonts/poppins-v20-latin-300.woff2') format('woff2');
+}
+
+/* Add all other weights (400,500,600,700) */
+
+/* Playfair Display */
+@font-face {
+    font-family: 'Playfair Display';
+    font-style: normal;
+    font-weight: 500;
+    src: url('/fonts/playfair-display-v30-latin-500.woff2') format('woff2');
+}
+
+/* Add weights 600,700 */
