@@ -147,6 +147,7 @@
     .bio-content {
         flex-direction: column;
         text-align: center;
+        align-items: center;
     }
 
     .bio-content .profile img {
