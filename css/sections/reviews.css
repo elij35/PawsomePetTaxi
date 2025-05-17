@@ -71,3 +71,36 @@
     font-size: 0.85rem;
     color: var(--text-light);
 }
+
+.review-links {
+  margin-top: 2rem;
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.review-btn {
+  padding: 0.6em 1.2em;
+  border-radius: 5px;
+  font-weight: bold;
+  text-decoration: none;
+  color: white;
+  transition: background 0.3s;
+}
+
+.review-btn.google {
+  background-color: #4285F4;
+}
+
+.review-btn.google:hover {
+  background-color: #3367d6;
+}
+
+.review-btn.facebook {
+  background-color: #3b5998;
+}
+
+.review-btn.facebook:hover {
+  background-color: #2d4373;
+}
