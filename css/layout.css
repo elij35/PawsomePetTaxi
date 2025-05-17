@@ -8,7 +8,7 @@
 
 .section-subtitle {
     display: inline-block;
-    font-size: 0.95rem;
+    font-size: 1.3rem;
     font-weight: 600;
     color: var(--secondary);
     text-transform: uppercase;
@@ -24,13 +24,13 @@
     bottom: 0;
     left: 50%;
     transform: translateX(-50%);
-    width: 50px;
+    width: 200px;
     height: 2px;
     background: var(--accent);
 }
 
 .section-header h2 {
-    font-size: 2.2rem;
+    font-size: 1.8rem;
     margin-bottom: 15px;
 }
 

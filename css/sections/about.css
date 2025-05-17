@@ -1,26 +1,41 @@
-/* About */
+/* ============================
+   About / Features Section
+============================ */
 .features {
-    padding: 80px 0;
-    background: var(--white);
+    padding: 6rem 1.5rem;
+    background-color: var(--white);
+    color: var(--text-color, #1e293b);
+    position: relative;
+    overflow: hidden;
+}
+
+.features .container {
+    max-width: 1200px;
+    margin: 0 auto;
     position: relative;
 }
 
+/* ============================
+   Feature Grid Cards
+============================ */
 .feature-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 25px;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2rem;
+    margin-bottom: 4rem;
 }
 
 .feature-card {
+    background: var(--white, #fff);
+    padding: 2.5rem 1.5rem;
+    border-radius: 1rem;
     text-align: center;
-    padding: 35px 25px;
-    background: var(--light);
-    border-radius: 10px;
-    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.05);
-    transition: var(--transition);
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05),
+        0 2px 4px -1px rgba(0, 0, 0, 0.02);
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    border: 1px solid rgba(0, 0, 0, 0.03);
     position: relative;
     overflow: hidden;
-    z-index: 1;
 }
 
 .feature-card::before {
@@ -30,73 +45,140 @@
     left: 0;
     width: 100%;
     height: 4px;
-    background: var(--accent);
-    transition: var(--transition);
+    background: var(--primary, #0d9488);
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform 0.3s ease;
 }
 
 .feature-card:hover {
-    transform: translateY(-8px);
-    box-shadow: 0 12px 25px rgba(0, 0, 0, 0.1);
+    transform: translateY(-0.5rem);
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.05),
+        0 4px 6px -2px rgba(0, 0, 0, 0.03);
 }
 
 .feature-card:hover::before {
-    height: 6px;
+    transform: scaleX(1);
 }
 
 .feature-icon {
-    width: 70px;
-    height: 70px;
-    margin: 0 auto 20px;
-    background: rgba(93, 138, 143, 0.1);
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 1.8rem;
-    color: var(--secondary);
-    transition: var(--transition);
+    font-size: 2.5rem;
+    color: var(--primary, #0d9488);
+    margin-bottom: 1.5rem;
+    transition: transform 0.3s ease;
 }
 
 .feature-card:hover .feature-icon {
-    background: var(--secondary);
-    color: var(--white);
-    transform: rotateY(180deg);
+    transform: scale(1.1);
 }
 
 .feature-card h3 {
-    margin-bottom: 12px;
-    font-size: 1.3rem;
+    font-size: 1.25rem;
+    font-weight: 600;
+    margin-bottom: 1rem;
+    color: var(--heading-color, #0f172a);
+    font-family: 'Playfair Display', serif;
 }
 
 .feature-card p {
-    color: var(--text-light);
-    font-size: 0.95rem;
-    line-height: 1.5;
+    font-size: 1rem;
+    line-height: 1.6;
+    color: var(--text-color, #475569);
+    margin: 0;
 }
 
-@media (min-width: 576px) {
-    .feature-grid {
-        grid-template-columns: repeat(2, 1fr);
+/* ============================
+   About Bio Section
+============================ */
+.bio-content {
+    display: flex;
+    align-items: flex-start;
+    gap: 2rem;
+    max-width: 56rem;
+    margin: 0 auto;
+    text-align: left;
+}
+
+.bio-content .profile {
+    flex-shrink: 0;
+}
+
+.bio-content .profile img {
+    width: 14rem;
+    border-radius: 8px;
+    border: 4px solid var(--white, #fff);
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+    object-fit: cover;
+    display: block;
+}
+
+.bio-content p {
+    padding-top: 12px;
+}
+
+.bio-content .bio-text {
+    flex: 1;
+}
+
+.pet-images {
+    display: flex;
+    justify-content: center;
+    gap: 1.5rem;
+    margin-top: 1.5rem;
+    flex-wrap: wrap;
+}
+
+.pet-images img {
+    width: 100%;
+    max-width: 12rem;
+    border-radius: 1rem;
+    aspect-ratio: 1/1;
+    object-fit: cover;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.pet-images img:hover {
+    transform: scale(1.05);
+}
+
+/* ===== Responsive Adjustments ===== */
+@media (max-width: 768px) {
+    .bio-content {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .bio-content .profile img {
+        width: 100%;
+        max-width: 300px;
+        height: auto;
+        margin: 0 auto 1.5rem;
+        border-radius: 8px;
+    }
+
+    .bio-content .bio-text {
+        width: 100%;
     }
 }
 
-@media (min-width: 768px) {
-    .features {
-        padding: 80px 0;
+@media (max-width: 480px) {
+    .bio-content .profile img {
+        max-width: 250px;
     }
 
-    .feature-grid {
-        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-        gap: 25px;
+    .bio-content .bio-text h3 {
+        font-size: 1.125rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .profile img {
+        width: 8rem;
+        height: 8rem;
     }
 
-    .feature-card {
-        padding: 35px 25px;
-    }
-
-    .feature-icon {
-        width: 70px;
-        height: 70px;
-        font-size: 1.8rem;
+    .pet-images img {
+        max-width: 10rem;
     }
 }
