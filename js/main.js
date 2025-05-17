@@ -1,217 +1,192 @@
-// main.js
 document.addEventListener("DOMContentLoaded", () => {
     const navLinks = document.querySelectorAll(".nav-links a");
     const sections = document.querySelectorAll("section");
-    const body = document.body;
-    let mobileMenuBtn = null;
-    let mobileMenu = null;
-    let mobileMenuOverlay = null;
     let lastScrollTop = window.pageYOffset;
-    let currentActiveLink = null;
 
-    // Scroll handler for directional navigation
-    const handleScroll = () => {
+    // Mobile menu variables
+    let mobileMenuBtn, mobileMenu, mobileMenuOverlay;
+
+    // Scroll-based active link & direction indicator
+    function handleScroll() {
         const currentScroll = window.pageYOffset;
         const direction = currentScroll > lastScrollTop ? "down" : "up";
-        lastScrollTop = currentScroll <= 0 ? 0 : currentScroll;
+        lastScrollTop = Math.max(currentScroll, 0);
+        const viewportMiddle = currentScroll + window.innerHeight / 2;
 
         let activeSection = null;
-        const viewportMiddle = window.scrollY + (window.innerHeight / 2);
-
         sections.forEach(section => {
-            const sectionTop = section.offsetTop - 100;
-            const sectionBottom = sectionTop + section.offsetHeight;
-
-            if (viewportMiddle >= sectionTop && viewportMiddle <= sectionBottom) {
-                activeSection = section.id;
-            }
+            const top = section.offsetTop - 100;
+            const bottom = top + section.offsetHeight;
+            if (viewportMiddle >= top && viewportMiddle <= bottom) activeSection = section.id;
         });
 
         if (activeSection) {
-            const newActiveLink = document.querySelector(`.nav-links a[href="#${activeSection}"]`);
-
-            if (newActiveLink) {
-                navLinks.forEach(link => {
-                    link.classList.remove("active", "scroll-down", "scroll-up");
-                });
-                newActiveLink.classList.add("active", `scroll-${direction}`);
-                currentActiveLink = newActiveLink;
-            }
+            navLinks.forEach(link => link.classList.remove("active", "scroll-down", "scroll-up"));
+            const activeLink = document.querySelector(`.nav-links a[href="#${activeSection}"]`);
+            if (activeLink) activeLink.classList.add("active", `scroll-${direction}`);
         }
+    }
 
-    };
-
-    // Throttled scroll event
-    let ticking = false;
-    window.addEventListener("scroll", () => {
-        if (!ticking) {
-            window.requestAnimationFrame(() => {
-                handleScroll();
-                ticking = false;
-            });
-            ticking = true;
-        }
-    });
-
-    handleScroll();
-
-    const initMobileMenu = () => {
-        // Create overlay
-        mobileMenuOverlay = document.createElement("div");
-        mobileMenuOverlay.className = "mobile-menu-overlay";
-        mobileMenuOverlay.addEventListener("click", toggleMobileMenu);
-
-        // Create menu container
-        mobileMenu = document.createElement("div");
-        mobileMenu.className = "mobile-menu";
-
-        // Create menu content
-        const menuContent = document.createElement("div");
-        menuContent.className = "mobile-menu-content";
-
-        // Create header with close button
-        const menuHeader = document.createElement("div");
-        menuHeader.className = "mobile-menu-header";
-
-        const closeButton = document.createElement("button");
-        closeButton.className = "mobile-menu-close";
-        closeButton.innerHTML = "✕";
-        closeButton.addEventListener("click", toggleMobileMenu);
-
-        menuHeader.appendChild(closeButton);
-        menuContent.appendChild(menuHeader);
-
-        // Add logo to mobile menu
-        const logoContainer = document.createElement("div");
-        logoContainer.className = "mobile-menu-logo";
-
-        const logoImg = document.createElement("img");
-        logoImg.src = "images/logo.png";
-        logoImg.alt = "Pawsome Pet Taxi logo";
-
-        const logoText = document.createElement("span");
-        logoText.textContent = "Pawsome Pet Taxi";
-
-        logoContainer.appendChild(logoImg);
-        logoContainer.appendChild(logoText);
-        menuContent.appendChild(logoContainer);
-
-        // Create nav element and clone links
-        const mobileNav = document.createElement("nav");
-        mobileNav.className = "mobile-menu-nav";
-
-        const originalNav = document.querySelector(".nav-links");
-        if (originalNav) {
-            originalNav.querySelectorAll("a").forEach(link => {
-                const clonedLink = link.cloneNode(true);
-                clonedLink.addEventListener("click", toggleMobileMenu);
-                mobileNav.appendChild(clonedLink);
-            });
-        }
-
-        menuContent.appendChild(mobileNav);
-        mobileMenu.appendChild(menuContent);
-
-        // Add elements to DOM
-        document.body.appendChild(mobileMenuOverlay);
-        document.body.appendChild(mobileMenu);
-
-        // Create menu button
-        mobileMenuBtn = document.createElement("button");
-        mobileMenuBtn.className = "mobile-menu-btn";
-        mobileMenuBtn.innerHTML = "☰";
-        mobileMenuBtn.addEventListener("click", toggleMobileMenu);
-
-        const header = document.querySelector(".navbar");
-        if (header) {
-            header.appendChild(mobileMenuBtn);
-        }
-    };
-
-    const toggleMobileMenu = () => {
-        if (!mobileMenu || !mobileMenuOverlay) return;
-        mobileMenu.classList.toggle("active");
-        mobileMenuOverlay.classList.toggle("active");
-        document.body.classList.toggle("no-scroll"); 
-    };
-
-    const cleanupMobileMenu = () => {
-        if (mobileMenu) {
-            mobileMenu.remove();
-            mobileMenu = null;
-        }
-        if (mobileMenuOverlay) {
-            mobileMenuOverlay.remove();
-            mobileMenuOverlay = null;
-        }
-        if (mobileMenuBtn) {
-            mobileMenuBtn.remove();
-            mobileMenuBtn = null;
-        }
-        document.body.classList.remove("no-scroll");
-    };
-
-    // Responsive check
-    const checkMobileMenu = () => {
-        if (window.innerWidth <= 768) {
-            if (!mobileMenuBtn) {
-                initMobileMenu();
-            }
-        } else {
-            cleanupMobileMenu();
-            document.querySelector(".nav-links").style.display = "flex";
-        }
-    };
-
-    // Initialize
-    checkMobileMenu();
-    window.addEventListener("resize", checkMobileMenu);
-
-    // Section animations
-    const animateOnScroll = () => {
+    // Animate sections when scrolling into view
+    function animateOnScroll() {
+        const windowHeight = window.innerHeight;
         sections.forEach(section => {
-            const sectionTop = section.getBoundingClientRect().top;
-            const windowHeight = window.innerHeight;
-
-            if (sectionTop < windowHeight * 0.75) {
+            const top = section.getBoundingClientRect().top;
+            if (top < windowHeight * 0.75) {
                 section.style.opacity = "1";
                 section.style.transform = "translateY(0)";
             }
         });
-    };
+    }
 
+    // Initialize sections styles for animation
     sections.forEach(section => {
         section.style.opacity = "0";
         section.style.transform = "translateY(20px)";
         section.style.transition = "opacity 0.6s ease, transform 0.6s ease";
     });
 
-    window.addEventListener("scroll", animateOnScroll);
-    animateOnScroll();
+    // Mobile menu toggle handler
+    function toggleMobileMenu() {
+        if (!mobileMenu || !mobileMenuOverlay) return;
+        mobileMenu.classList.toggle("active");
+        mobileMenuOverlay.classList.toggle("active");
+        document.body.classList.toggle("no-scroll");
+    }
 
-    // Smooth scroll
+    // Create mobile menu elements dynamically
+    function createMobileMenuElements() {
+        // Overlay
+        mobileMenuOverlay = document.createElement("div");
+        mobileMenuOverlay.className = "mobile-menu-overlay";
+        mobileMenuOverlay.addEventListener("click", toggleMobileMenu);
+
+        // Menu container
+        mobileMenu = document.createElement("div");
+        mobileMenu.className = "mobile-menu";
+
+        const menuContent = document.createElement("div");
+        menuContent.className = "mobile-menu-content";
+
+        // Header with close button
+        const menuHeader = document.createElement("div");
+        menuHeader.className = "mobile-menu-header";
+        const closeBtn = document.createElement("button");
+        closeBtn.className = "mobile-menu-close";
+        closeBtn.innerHTML = "✕";
+        closeBtn.addEventListener("click", toggleMobileMenu);
+        menuHeader.appendChild(closeBtn);
+
+        // Logo container
+        const logoContainer = document.createElement("div");
+        logoContainer.className = "mobile-menu-logo";
+        const logoImg = document.createElement("img");
+        logoImg.src = "images/logo.png";
+        logoImg.alt = "Pawsome Pet Taxi logo";
+        const logoText = document.createElement("span");
+        logoText.textContent = "Pawsome Pet Taxi";
+        logoContainer.append(logoImg, logoText);
+
+        // Navigation links (cloned)
+        const mobileNav = document.createElement("nav");
+        mobileNav.className = "mobile-menu-nav";
+        const originalNav = document.querySelector(".nav-links");
+        if (originalNav) {
+            originalNav.querySelectorAll("a").forEach(link => {
+                const clone = link.cloneNode(true);
+                clone.addEventListener("click", toggleMobileMenu);
+                mobileNav.appendChild(clone);
+            });
+        }
+
+        // Assemble menu content
+        menuContent.append(menuHeader, logoContainer, mobileNav);
+        mobileMenu.appendChild(menuContent);
+
+        // Append overlay and menu to body
+        document.body.append(mobileMenuOverlay, mobileMenu);
+
+        // Create and append mobile menu button in navbar
+        mobileMenuBtn = document.createElement("button");
+        mobileMenuBtn.className = "mobile-menu-btn";
+        mobileMenuBtn.innerHTML = "☰";
+        mobileMenuBtn.setAttribute("aria-label", "Toggle mobile menu");
+        mobileMenuBtn.addEventListener("click", toggleMobileMenu);
+        const navbar = document.querySelector(".navbar");
+        if (navbar) navbar.appendChild(mobileMenuBtn);
+    }
+
+    // Remove mobile menu elements
+    function cleanupMobileMenu() {
+        [mobileMenu, mobileMenuOverlay, mobileMenuBtn].forEach(el => el?.remove());
+        mobileMenu = mobileMenuOverlay = mobileMenuBtn = null;
+        document.body.classList.remove("no-scroll");
+    }
+
+    // Check window width to toggle mobile menu
+    function checkMobileMenu() {
+        if (window.innerWidth <= 768) {
+            if (!mobileMenuBtn) createMobileMenuElements();
+            // Hide desktop nav links on mobile
+            const navLinksContainer = document.querySelector(".nav-links");
+            if (navLinksContainer) navLinksContainer.style.display = "none";
+        } else {
+            cleanupMobileMenu();
+            const navLinksContainer = document.querySelector(".nav-links");
+            if (navLinksContainer) navLinksContainer.style.display = "flex";
+        }
+    }
+
+    // Smooth scrolling for anchor links
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-        anchor.addEventListener("click", function (e) {
+        anchor.addEventListener("click", e => {
+            const targetId = anchor.getAttribute("href");
+            if (targetId === "#" || !targetId) return;
             e.preventDefault();
-            const targetId = this.getAttribute("href");
-            if (targetId === "#") return;
-
-            const targetElement = document.querySelector(targetId);
-            if (targetElement) {
+            const target = document.querySelector(targetId);
+            if (target) {
                 window.scrollTo({
-                    top: targetElement.offsetTop - 80,
+                    top: target.offsetTop - 80,
                     behavior: "smooth"
                 });
+                // If mobile menu is open, close it after clicking link
+                if (mobileMenu?.classList.contains("active")) toggleMobileMenu();
             }
         });
     });
 
-    // Hamburger menu animation
+    // Desktop hamburger menu toggle (if used)
     const menuToggle = document.querySelector(".menu-toggle");
     if (menuToggle) {
-        menuToggle.addEventListener("click", function () {
-            this.classList.toggle("active");
-            document.querySelector(".nav-links").classList.toggle("active");
+        menuToggle.addEventListener("click", () => {
+            menuToggle.classList.toggle("active");
+            const navLinksContainer = document.querySelector(".nav-links");
+            if (navLinksContainer) navLinksContainer.classList.toggle("active");
         });
     }
+
+    // Debounce helper
+    function debounce(fn, delay) {
+        let timer;
+        return () => {
+            clearTimeout(timer);
+            timer = setTimeout(fn, delay);
+        };
+    }
+
+    // Handle scroll & viewport changes
+    window.addEventListener("scroll", () => {
+        handleScroll();
+        animateOnScroll();
+    });
+
+    // Check mobile menu on load and resize (debounced)
+    window.addEventListener("resize", debounce(() => {
+        checkMobileMenu();
+    }, 150));
+
+    // Initial setup calls
+    checkMobileMenu();
+    handleScroll();
+    animateOnScroll();
 });
