@@ -4,88 +4,343 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="A friendly, reliable Pet Taxi service covering Solihull and surrounding areas.">
-    <title>Pawsome Pet Taxi</title>
+    <meta name="description" content="Reliable pet taxi service in Solihull for vet visits, groomers, and kennels">
+    <title>Pawsome Pet Taxi | Solihull Pet Transportation</title>
     <link rel="icon" href="images/favicon.ico" type="image/x-icon">
-    <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon">
-    <link rel="stylesheet" href="css/site.css">
-    <link rel="stylesheet" href="css/index.css">
-    <script src="js/script.js"></script>
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <!-- Base Variables -->
+    <link rel="stylesheet" href="css/base.css">
+
+    <!-- Layout Styles -->
+    <link rel="stylesheet" href="css/layout.css">
+
+    <!-- Component Styles -->
+    <link rel="stylesheet" href="css/components/animation.css">
+    <link rel="stylesheet" href="css/components/buttons.css">
+    <link rel="stylesheet" href="css/components/footer.css">
+    <link rel="stylesheet" href="css/components/header.css">
+    <link rel="stylesheet" href="css/components/mobile-menu.css">
+
+    <!-- Section Styles -->
+    <link rel="stylesheet" href="css/sections/about.css">
+    <link rel="stylesheet" href="css/sections/contact.css">
+    <link rel="stylesheet" href="css/sections/features.css">
+    <link rel="stylesheet" href="css/sections/hero.css">
+    <link rel="stylesheet" href="css/sections/reviews.css">
+    <link rel="stylesheet" href="css/sections/services.css">
+
+    <!-- JavaScript -->
+    <script defer src="js/main.js"></script>
+
 </head>
 
 <body>
     <header class="header">
-        <nav class="navbar">
-            <div class="logo">
-                <div class="hamburger">
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                </div>
-                <a href="index.html">
+        <div class="container">
+            <nav class="navbar">
+                <a href="index.html" class="logo">
                     <img src="images/logo.png" alt="Pawsome Pet Taxi Logo">
+                    <span>Pawsome Pet Taxi</span>
                 </a>
-                <span><b>Pawsome Pet Taxi</b></span>
-            </div>
-            <ul class="nav-links">
-                <li><a href="index.html" class="active">Home</a></li>
-                <li><a href="about.html">About</a></li>
-                <li><a href="services.html">Services</a></li>
-                <li><a href="contact.html">Contact</a></li>
-            </ul>
-        </nav>
 
-        <!-- Sidebar -->
-        <div class="sidebar">
-            <div class="sidebar-logo">
-                <img src="images/logo.png" alt="Pawsome Pet Taxi Logo">
-            </div>
-            <ul>
-                <li><a href="index.html" class="active">Home</a></li>
-                <li><a href="about.html">About</a></li>
-                <li><a href="services.html">Services</a></li>
-                <li><a href="contact.html">Contact</a></li>
-            </ul>
+                <button class="menu-toggle" aria-label="Toggle menu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+
+                <div class="nav-links">
+                    <a href="index.html" class="active">Home</a>
+                    <a href="#services">Services</a>
+                    <a href="#services">About</a>
+                    <a href="#contact">Contact</a>
+                </div>
+            </nav>
         </div>
-        <div class="overlay"></div>
     </header>
 
     <main>
-        <section id="welcome" class="info">
-            <h1>Welcome to Pawsome Pet Taxi</h1>
-            <p>A friendly, reliable Pet Taxi service covering Solihull and surrounding areas.</p>
+        <section class="hero">
+            <div class="container">
+                <div class="hero-content">
+                    <h1>Stress-Free Pet Transport in Solihull</h1>
+                    <p class="subtitle">Professional, compassionate transportation for your beloved pets</p>
+                    <div class="hero-buttons">
+                        <a href="tel:+447848901128" class="btn btn-primary">
+                            <i class="fab fa-whatsapp"></i> 07848 901128
+                        </a>
+                        <a href="#services" class="btn btn-secondary">
+                            <i class="fas fa-paw"></i> Our Services
+                        </a>
+                    </div>
+                </div>
+                <div class="hero-image">
+                    <img src="images/about/about-lexi.jpg" alt="Happy dog in car" class="floating">
+                </div>
+            </div>
         </section>
 
-        <div class="slider">
-            <div class="slides">
-                <img src="images/home/home-img01.jpg" alt="Slide 1">
-                <img src="images/home/home-img02.jpg" alt="Slide 2">
-                <img src="images/home/home-img03.jpg" alt="Slide 3">
-                <img src="images/home/home-img04.jpg" alt="Slide 4">
+        <section class="features">
+            <div class="container">
+                <div class="section-header">
+                    <span class="section-subtitle">Why Choose Us</span>
+                    <h2>Exceptional Care for Your Pets</h2>
+                    <p class="section-description">We go above and beyond to ensure your pet's comfort and safety during
+                        every journey</p>
+                </div>
+                <div class="feature-grid">
+                    <div class="feature-card">
+                        <div class="feature-icon">
+                            <i class="fas fa-shield-alt"></i>
+                        </div>
+                        <h3>Safe Transport</h3>
+                        <p>Climate-controlled vehicles with secure pet carriers and safety restraints for worry-free
+                            travel</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon">
+                            <i class="fas fa-user-nurse"></i>
+                        </div>
+                        <h3>Vet Nurse Experience</h3>
+                        <p>Professional care from a qualified veterinary nurse with extensive animal handling experience
+                        </p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon">
+                            <i class="fas fa-clock"></i>
+                        </div>
+                        <h3>Flexible Scheduling</h3>
+                        <p>Available for emergencies, last-minute needs, and regular appointments with punctual service
+                        </p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon">
+                            <i class="fas fa-heart"></i>
+                        </div>
+                        <h3>Compassionate Care</h3>
+                        <p>We treat every pet as if they were our own, with patience, love, and understanding</p>
+                    </div>
+                </div>
             </div>
-            <button class="prev">&#10094;</button>
-            <button class="next">&#10095;</button>
-        </div>
+        </section>
 
-        <!-- Dots under the images -->
-        <div class="dots-container">
-            <span class="dot"></span>
-            <span class="dot"></span>
-            <span class="dot"></span>
-            <span class="dot"></span>
-        </div>
+        <section id="services" class="services-preview">
+            <div class="container">
+                <div class="section-header">
+                    <span class="section-subtitle">Our Services</span>
+                    <h2>Professional Pet Transportation</h2>
+                    <p class="section-description">Comprehensive transport solutions tailored to your pet's needs</p>
+                </div>
+                <div class="service-cards">
+                    <div class="service-card">
+                        <div class="service-image">
+                            <img src="images/vets/vets-img1.jpg" alt="Vet transport service">
+                        </div>
+                        <div class="service-content">
+                            <h3>Vet Appointments</h3>
+                            <p>Stress-free transport to veterinary visits with pre-appointment calming techniques</p>
+                            <ul class="service-benefits">
+                                <li><i class="fas fa-check-circle"></i> Medication administration if needed</li>
+                                <li><i class="fas fa-check-circle"></i> Post-procedure monitoring</li>
+                                <li><i class="fas fa-check-circle"></i> Emergency transport available</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="service-card">
+                        <div class="service-image">
+                            <img src="images/vets/vets-img2.jpg" alt="Kennel transport service">
+                        </div>
+                        <div class="service-content">
+                            <h3>Kennel/Cattery</h3>
+                            <p>Reliable transport to boarding facilities with minimal stress for your pet</p>
+                            <ul class="service-benefits">
+                                <li><i class="fas fa-check-circle"></i> Familiarization visits available</li>
+                                <li><i class="fas fa-check-circle"></i> Comfort items transported</li>
+                                <li><i class="fas fa-check-circle"></i> Pick-up and return service</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="service-card">
+                        <div class="service-image">
+                            <img src="images/vets/vets-img3.jpg" alt="Groomer transport service">
+                        </div>
+                        <div class="service-content">
+                            <h3>Groomers</h3>
+                            <p>Door-to-door grooming transport with special handling for anxious pets</p>
+                            <ul class="service-benefits">
+                                <li><i class="fas fa-check-circle"></i> Post-grooming cleanup</li>
+                                <li><i class="fas fa-check-circle"></i> Special needs accommodation</li>
+                                <li><i class="fas fa-check-circle"></i> Regular appointment scheduling</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="testimonials">
+            <div class="container">
+                <div class="section-header">
+                    <span class="section-subtitle">Happy Clients</span>
+                    <h2>What Pet Owners Say</h2>
+                    <p class="section-description">Don't just take our word for it - hear from our satisfied customers
+                    </p>
+                </div>
+                <div class="testimonial-slider">
+                    <div class="testimonial-card">
+                        <div class="testimonial-rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                        <p class="testimonial-text">"Pawsome Pet Taxi has been a lifesaver for my anxious Labrador.
+                            Their vet nurse experience makes all the difference - my dog actually gets excited to see
+                            them now!"</p>
+                        <div class="testimonial-author">
+                            <img src="images/client1.jpg" alt="Sarah J.">
+                            <div>
+                                <h4>Sarah J.</h4>
+                                <span>Solihull</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="testimonial-card">
+                        <div class="testimonial-rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                        <p class="testimonial-text">"I use their service weekly for my cat's vet visits. The
+                            climate-controlled vehicle and gentle handling mean no more stressful car journeys for my
+                            feline friend."</p>
+                        <div class="testimonial-author">
+                            <img src="images/client2.jpg" alt="Michael T.">
+                            <div>
+                                <h4>Michael T.</h4>
+                                <span>Knowle</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="testimonial-card">
+                        <div class="testimonial-rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star-half-alt"></i>
+                        </div>
+                        <p class="testimonial-text">"When our regular groomer moved locations, Pawsome Pet Taxi made
+                            sure our elderly poodle could still attend appointments without the stress of a long drive."
+                        </p>
+                        <div class="testimonial-author">
+                            <img src="images/client3.jpg" alt="Emma & David R.">
+                            <div>
+                                <h4>Emma & David R.</h4>
+                                <span>Shirley</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="cta-section">
+            <div class="container">
+                <div class="cta-content">
+                    <h2>Ready for Stress-Free Pet Transport?</h2>
+                    <p>Book your pet's journey today and experience the Pawsome difference</p>
+                    <div class="cta-buttons">
+                        <a href="tel:+447848901128" class="btn btn-primary">
+                            <i class="fas fa-phone-alt"></i> Call Now
+                        </a>
+                        <a href="contact.html" class="btn btn-secondary">
+                            <i class="fas fa-envelope"></i> Email Us
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="service-area">
+            <div class="container">
+                <div class="section-header">
+                    <span class="section-subtitle">Coverage Area</span>
+                    <h2>Serving Solihull & Surrounding Areas</h2>
+                </div>
+                <div class="area-map">
+                    <img src="images/solihull-map.png" alt="Service area map" class="map-image">
+                    <div class="area-list">
+                        <div class="area-item">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <span>Solihull</span>
+                        </div>
+                        <div class="area-item">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <span>Shirley</span>
+                        </div>
+                        <div class="area-item">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <span>Knowle</span>
+                        </div>
+                        <div class="area-item">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <span>Dorridge</span>
+                        </div>
+                        <div class="area-item">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <span>Hockley Heath</span>
+                        </div>
+                    </div>
+                </div>
+                <p class="text-center">Don't see your area listed? We may still be able to help - <a
+                        href="contact.html">contact us</a> to inquire about service availability.</p>
+            </div>
+        </section>
     </main>
 
-    <footer class="footer">
-        <h2>Pet Taxi Service</h2>
-        <p>
-            Call/WhatsApp: <a href="tel:+447848901128">07848 901128</a>
-        </p>
-        <p>
-            Email: <a href="mailto:pawsomepet.taxi@gmail.com">pawsomepet.taxi@gmail.com</a>
-        </p>
-        <img src="../images/logo.png" alt="Pawsome Pet Taxi Logo">
-        <p>&copy; 2025 Pawsome Pet Taxi. All rights reserved.</p>
+    <footer class="site-footer">
+        <div class="footer-container">
+            <div class="footer-grid">
+                <nav class="footer-section footer-links" aria-label="Quick Links">
+                    <h3 class="footer-heading">Quick Links</h3>
+                    <ul class="footer-list">
+                        <li><a href="index.html" class="footer-link">Home</a></li>
+                        <li><a href="#services" class="footer-link">Services</a></li>
+                        <li><a href="about.html" class="footer-link">About Us</a></li>
+                        <li><a href="contact.html" class="footer-link">Contact</a></li>
+                    </ul>
+                </nav>
+
+                <div class="footer-section footer-contact">
+                    <h3 class="footer-heading">Contact Us</h3>
+                    <ul class="footer-list contact-list">
+                        <li>
+                            <i class="fas fa-phone-alt"></i>
+                            <a href="tel:+447848901128" class="footer-link">07848 901128</a>
+                        </li>
+                        <li>
+                            <i class="fas fa-envelope"></i>
+                            <a href="mailto:pawsomepet.taxi@gmail.com" class="footer-link">pawsomepet.taxi@gmail.com</a>
+                        </li>
+                        <li>
+                            <i class="fas fa-map-marker-alt"></i>
+                            <span class="footer-text">Solihull, West Midlands</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p class="footer-copy">&copy; 2025 Pawsome Pet Taxi. All rights reserved.</p>
+            </div>
+        </div>
     </footer>
 </body>
 

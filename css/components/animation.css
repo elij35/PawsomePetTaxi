@@ -1,0 +1,21 @@
+/* Scroll to Top Button */
+.scroll-to-top {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    background: var(--accent);
+    color: var(--dark);
+    border: none;
+    padding: 12px 14px;
+    border-radius: 50%;
+    cursor: pointer;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    z-index: 1000;
+    display: none;
+    transition: var(--transition);
+}
+
+.scroll-to-top:hover {
+    background: #e6c200;
+    transform: translateY(-3px);
+}

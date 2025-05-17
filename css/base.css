@@ -1,0 +1,70 @@
+﻿:root {
+    --primary: #2A3D45;
+    --secondary: #5D8A8F;
+    --accent: #FFD700;
+    --light: #F7F9F9;
+    --dark: #1A2A32;
+    --text: #333;
+    --text-light: #777;
+    --white: #fff;
+    --footer-bg: #2A3D45;
+    --footer-text: #F7F9F9;
+    --footer-link: rgba(247, 249, 249, 0.8);
+    --footer-link-hover: var(--accent);
+    --footer-border: rgba(247, 249, 249, 0.1);
+    --footer-muted: rgba(247, 249, 249, 0.6);
+    --transition: all 0.3s ease;
+}
+
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    line-height: 1.6;
+    color: var(--text);
+    background: var(--light);
+    overflow-x: hidden;
+}
+
+h1,
+h2,
+h3,
+h4 {
+    font-family: 'Playfair Display', serif;
+    font-weight: 700;
+    line-height: 1.2;
+    color: var(--dark);
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+    transition: var(--transition);
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+ul {
+    list-style: none;
+}
+
+.container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.text-center {
+    text-align: center;
+}
