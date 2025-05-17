@@ -73,54 +73,54 @@
 }
 
 .review-links {
-  margin-top: 2rem;
-  display: flex;
-  gap: 1rem;
-  justify-content: center;
-  flex-wrap: wrap;
+    margin-top: 2rem;
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    flex-wrap: wrap;
 }
 
 .review-btn {
-  padding: 0.6em 1.2em;
-  border-radius: 5px;
-  font-weight: bold;
-  text-decoration: none;
-  color: white;
-  transition: background 0.3s;
+    padding: 0.6em 1.2em;
+    border-radius: 5px;
+    font-weight: bold;
+    text-decoration: none;
+    color: white;
+    transition: background 0.3s;
 }
 
 .review-btn.google {
-  background-color: #4285F4;
+    background-color: #4285F4;
 }
 
 .review-btn.google:hover {
-  background-color: #3367d6;
+    background-color: #3367d6;
 }
 
 .review-btn.facebook {
-  background-color: #3b5998;
+    background-color: #3b5998;
 }
 
 .review-btn.facebook:hover {
-  background-color: #2d4373;
+    background-color: #2d4373;
 }
 
 @media (min-width: 768px) {
     .testimonials {
         padding: 80px 0;
     }
-    
+
     .testimonial-slider {
         grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
         gap: 25px;
     }
-    
+
     .review-links {
         flex-direction: row;
         justify-content: center;
         gap: 15px;
     }
-    
+
     .review-btn {
         width: auto;
     }
