@@ -55,3 +55,22 @@
    justify-content: center;
    flex-wrap: wrap;
 }
+
+@media (min-width: 768px) {
+   .cta-section {
+      padding: 70px 0;
+   }
+
+   .cta-content h2 {
+      font-size: 2.2rem;
+   }
+
+   .cta-section p {
+      font-size: 1.1rem;
+   }
+
+   .cta-buttons {
+      flex-direction: row;
+      gap: 15px;
+   }
+}

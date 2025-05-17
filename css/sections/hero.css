@@ -1,60 +1,67 @@
-/* Hero Section */
+/* Hero Section - Mobile First */
 .hero {
     position: relative;
-    padding: 160px 0 100px;
+    padding: 100px 20px 60px;
     margin-top: 80px;
     overflow: hidden;
     background: linear-gradient(135deg, var(--primary) 0%, var(--secondary) 100%);
     color: var(--white);
+    text-align: center;
 }
 
 .hero .container {
     display: flex;
+    flex-direction: column;
     align-items: center;
-    justify-content: space-between;
-    gap: 40px;
+    gap: 30px;
     position: relative;
     z-index: 2;
 }
 
 .hero-content {
-    flex: 1;
-    max-width: 600px;
+    max-width: 100%;
+    width: 100%;
 }
 
 .hero h1 {
-    font-size: 2.8rem;
-    margin-bottom: 20px;
-    color: var(--white);
-    line-height: 1.1;
+    font-size: 2rem;
+    margin-bottom: 15px;
+    line-height: 1.2;
 }
 
 .hero .subtitle {
-    font-size: 1.2rem;
-    margin-bottom: 30px;
+    font-size: 1rem;
+    margin-bottom: 25px;
     color: rgba(255, 255, 255, 0.9);
     font-weight: 300;
 }
 
 .hero-buttons {
     display: flex;
-    gap: 15px;
-    margin-top: 30px;
+    flex-direction: column;
+    gap: 12px;
+    justify-content: center;
+}
+
+.hero-buttons a.btn {
+    width: 100%;
+    padding: 12px 0;
+    font-size: 1.1rem;
 }
 
 .hero-image {
-    flex: 1;
-    position: relative;
-    max-width: 500px;
+    width: 100%;
+    max-width: 320px;
 }
 
 .hero-image img {
     width: 100%;
     height: auto;
     border-radius: 10px;
-    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.2);
 }
 
+/* Floating animation unchanged */
 .floating {
     animation: floating 6s ease-in-out infinite;
 }
@@ -68,5 +75,66 @@
 
     50% {
         transform: translateY(-15px);
+    }
+}
+
+/* Tablet and up */
+@media (min-width: 576px) {
+    .hero {
+        padding: 130px 40px 80px;
+        text-align: left;
+    }
+
+    .hero .container {
+        gap: 40px;
+    }
+
+    .hero-buttons {
+        flex-direction: row;
+        justify-content: flex-start;
+        gap: 15px;
+    }
+
+    .hero-buttons a.btn {
+        width: auto;
+        padding: 12px 24px;
+    }
+
+    .hero h1 {
+        font-size: 2.4rem;
+    }
+
+    .hero .subtitle {
+        font-size: 1.1rem;
+    }
+}
+
+/* Desktop and up */
+@media (min-width: 768px) {
+    .hero {
+        padding: 160px 40px 100px;
+        margin-top: 80px;
+    }
+
+    .hero .container {
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    .hero-content {
+        max-width: 600px;
+    }
+
+    .hero h1 {
+        font-size: 2.8rem;
+    }
+
+    .hero .subtitle {
+        font-size: 1.2rem;
+    }
+
+    .hero-image {
+        max-width: 500px;
     }
 }

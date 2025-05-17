@@ -77,3 +77,27 @@
     font-size: 0.9em;
     margin-top: 3px;
 }
+
+@media (min-width: 576px) {
+    .service-cards {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (min-width: 992px) {
+    .services-preview {
+        padding: 80px 0;
+    }
+
+    .service-cards {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .service-image {
+        height: 200px;
+    }
+
+    .service-content {
+        padding: 20px;
+    }
+}
