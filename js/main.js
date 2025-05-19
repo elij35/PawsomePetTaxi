@@ -100,7 +100,10 @@ document.addEventListener("DOMContentLoaded", () => {
         }
 
         // Assemble menu content
-        menuContent.append(menuHeader, logoContainer, mobileNav);
+        menuHeader.appendChild(logoContainer);
+        menuHeader.appendChild(closeBtn);
+        menuContent.append(menuHeader, mobileNav);
+
         mobileMenu.appendChild(menuContent);
 
         // Append overlay and menu to body
